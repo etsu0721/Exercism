@@ -1,3 +1,3 @@
 object HelloWorld {
-  def hello() = println("Hello, World!")
+  def hello() = "Hello, World!"
 }
