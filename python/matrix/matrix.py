@@ -1,9 +1,15 @@
 class Matrix:
     def __init__(self, matrix_string):
-        self.matrix = matrix_string.split('\n')
+        try:
+            self.matrix = [
+                [*map(lambda num: int(num), nums)]
+                for nums in [num_str.split(' ') for num_str in matrix_string.split('\n')]
+            ]
+        except ValueError:
+            print('UH OH. . .Ensure your input is a string representing a matrix of numbers with embedded newlines, if any.')
 
     def row(self, index):
-        return [*map(lambda num_str: int(num_str), self.matrix[index-1].split(' '))]
+        return self.matrix[index-1]
 
     def column(self, index):
-        return [*map(lambda num_str: int(num_str.split(' ')[index-1]), self.matrix)]
+        return [row[index-1] for row in self.matrix]
