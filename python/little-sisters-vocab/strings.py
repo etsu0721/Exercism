@@ -31,7 +31,7 @@ def remove_suffix_ness(word):
     :param word: str of word to remove suffix from.
     :return: str of word with suffix removed & spelling adjusted.
 
-    This function takes in a word and returns the base word with `ness` removed.
+    This function takes in a word and returns the base word with `ness` removed. 
     """
     word_no_suffix = word[:-4]
     if word_no_suffix.endswith('i'):
