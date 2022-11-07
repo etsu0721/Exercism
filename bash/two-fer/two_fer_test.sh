@@ -24,7 +24,7 @@
 }
 
 @test "a name given" {
-  # [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run bash two_fer.sh Alice
   (( status == 0 ))
   [[ $output == "One for Alice, one for me." ]]

@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
+print_two_fer_str () {
+    echo "One for $1, one for me."
+}
+
 main () {
-    if [ -z "$1" ] 
+    if [[ -z "$1" ]]
     then
-        echo "One for you, one for me."
-    else
-        echo "One for $1, one for me."
+        print_two_fer_str "you"
+    else 
+        print_two_fer_str "$1"
     fi
 }
 
