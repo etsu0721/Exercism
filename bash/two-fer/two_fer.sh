@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 
-print_two_fer_str () {
-    echo "One for $1, one for me."
-}
-
 main () {
     if [[ -z "$1" ]]
     then
-        print_two_fer_str "you"
+        name="you"
     else 
-        print_two_fer_str "$1"
+        name="$1"
     fi
+    echo "One for $name, one for me."
 }
 
 # call main with all of the positional arguments
